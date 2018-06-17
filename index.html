@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/blood.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section><h1>Hello</h1></section>
+        <section><p>人間は変わるものです。</p></section>
+        <section data-background-image="fat.png"></section>
+        <section data-markdown>
+          <textarea data-template>
+            ```js
+            import Brandon from 'america'
+
+            const details = {
+              name: 'Brandon Pittman',
+              japaneseStyleName: 'ピットマン　ブランドン',
+              age: 34,
+              hometown: 'シンシナティ市　オハイオ州',
+              favoriteMovie: 'Fight Club',
+              favoriteTvShow: 'Game of Thrones'
+              company: '三菱電機エンジニアリング',
+              startDate: 2018-04-02,
+            }
+            ```
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ```ruby
+            #!/usr/bin/env ruby
+
+            LANGS = [ "Ruby", "Shell", "JavaScript", "CSS", "Elixir", "Elm"]
+
+            def langs_brandon_likes(ary)
+              puts ary
+            end
+
+            langs_brandon_likes(LANGS)
+
+            puts langs_brandon_must_use_for_work
+            # => "PHP"
+            ```
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ```php
+            #!/usr/bin/env php
+
+            $sorry = "PHPはそんなに悪くないけど、不満が多い。。。"
+
+            file_get_contents("好きなフレームワーク.txt");
+            # => Vue.js
+
+            file_get_contents("時間があれば、使ってみたいフレームワーク");
+            # => Laravel
+            ```
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ```sh
+            #!/usr/local/bin/fish
+
+            set -x SHELL /usr/local/bin/fish
+            set -x EDITOR nvim
+            awk '{ print $1 $2 $3 } ' secret.txt
+            # => I love Unix
+            ```
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ```applescript
+            set firstProgrammingLanguage to "AppleScript"
+
+            on useOmniFocus()
+              tell application "Safari"
+                set myURL to "github.com/brandonpittman/OmniFocus"
+                set URL of front document to myURL
+              end tell
+            end useOmniFocus
+
+            useOmniFocus()
+            ```
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ```js
+            const twitter = "@brandonpittman"
+            const github = "brandonpittman"
+            const facebook = false
+
+            const goodbye = () => "Thank you very much."
+
+            export default goodbye
+            ```
+          </textarea>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
